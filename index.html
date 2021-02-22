@@ -11,7 +11,7 @@
    <script src="//code.jquery.com/jquery.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body ng-app ng-init="title='ngstore'; name='Alexandre'; age=25">
+<body ng-app="app" ng-init="title='ngstore'; name='Alexandre'; age=25">
     <div id="main">
         <div id="navbar">
             <nav class="navbar navbar-default" role="navigation">
@@ -56,9 +56,15 @@
         <div id="wrapper">
             <h1>Bonjour {{ name }}</h1>
             <h2>Vous aurez  => {{ age + 10 }} ans dans 10 ans</h2>
+            <hr/>
+            <div class="produit" ng-controller="produitCtrl">
+               
+            </div>
         </div>
     </div>
 </body>
 
 <script src="./node_modules/angular/angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/produitCtrl/produitCtrl.js"></script>
 </html>
