@@ -11,7 +11,7 @@
    <script src="//code.jquery.com/jquery.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body ng-app ng-init="title='ngstore'; name='Alexandre'; age=25">
     <div id="main">
         <div id="navbar">
             <nav class="navbar navbar-default" role="navigation">
@@ -23,7 +23,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Title</a>
+                    <a class="navbar-brand" href="#">Mon Application {{ title }}  </a>
                 </div>
             
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -54,8 +54,11 @@
             </nav>
         </div> <!-- fin navbar-->
         <div id="wrapper">
-            <h1>Voici le corps de mon app</h1>
+            <h1>Bonjour {{ name }}</h1>
+            <h2>Vous aurez  => {{ age + 10 }} ans dans 10 ans</h2>
         </div>
     </div>
 </body>
+
+<script src="./node_modules/angular/angular.js"></script>
 </html>
