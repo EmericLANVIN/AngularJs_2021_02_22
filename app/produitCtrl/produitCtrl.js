@@ -6,7 +6,7 @@
                 // model + actions
 
                 //Var sur le scope
-                $scope='une valeur issue du $scope';
+                $scope.value='une valeur issue du $scope';
                 // Une Variable local au controller
                 var localVar='une variable local';
                 

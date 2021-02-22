@@ -57,8 +57,12 @@
             <h1>Bonjour {{ name }}</h1>
             <h2>Vous aurez  => {{ age + 10 }} ans dans 10 ans</h2>
             <hr/>
-            <div class="produit" ng-controller="produitCtrl">
-               
+            <div class="produit" ng-controller="produitCtrl as prod">
+                <h1>Produit</h1>
+                    <!--Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores iusto pariatur cupiditate dignissimos tempora odio. Molestiae necessitatibus perspiciatis sit consectetur nesciunt, accusantium hic inventore dolores magni totam architecto esse voluptates!<br/>-->
+                    {{ value }} <br/>
+                    {{ name }} <br/>
+                    {{ prod.nom }} <br/>
             </div>
         </div>
     </div>
