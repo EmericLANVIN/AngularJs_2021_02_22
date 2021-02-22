@@ -12,11 +12,11 @@
                 
 
                 this.id=0;
-                this.nom='Pepsi 1.5';
-                this.description='Boisson gazeuse arome café, Americaine';
+                this.nom='Pepsi 33cl';
+                this.description='Boisson gazeuse Americaine';
                 this.prix=2.54;
                 this.stock=10;
-                this.img='\img\Pepsi_transparent.png';
+                this.img ='/img/Pepsi_transparent.png';
                 this.categorie={id:0,name:'Boisson'}
             }
         ]);
