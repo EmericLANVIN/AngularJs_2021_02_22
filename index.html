@@ -61,8 +61,43 @@
             <h1>Bonjour {{ name }}</h1>
             <h2>Vous aurez => {{ age + 10 }} ans dans 10 ans</h2>
             <hr />
-            <h1>Liste Produits</h1>
+            <div class="" ng-controller="produitCtrl as prod">
+                <form action="" method="POST" role="form">
+                    <legend>Ajouter un produit</legend>
+                
+                    <div class="form-group" style="width: 200px; padding: 15px;">
+
+                        <label for="prod_id">ID</label> </br>
+                        <input type="text" class="form-control" id="" placeholder="ID produit" disabled value="{{ prod.id }}"/> </br>
+
+                        <label for="prod_nom">Nom</label></br> 
+                        <input type="text" class="form-control" id="" placeholder="Nom produit" ng-model="prod.nom"/></br>
+
+                        <label for="prod_prix">Prix</label></br> 
+                        <input type="number" class="form-control" id="" placeholder="Prix €" min="0" step="0.01"  ng-model="prod.prix"/></br>
+
+                        <label for="prod_stock">Stock</label></br> 
+                        <input type="number" class="form-control" id="" placeholder="Stock" min="0" ng-model="prod.stock" /></br>
+
+                        <textarea name="prod_desc" id="prod_desc" cols="30" rows="10" ng-model="prod.description" ></textarea>
+
+                        <label for="prod_categorie">Categorie</label></br>
+                        <select name="prod_categorie" id="prod_categorie" ng-controller="categoriesCtrl as cat"  ng-model="prod.categorie">
+                            <option ng-repeat="categorie in cat.categories" ng-value="{{ categorie }}"> 
+                                {{ categorie.nom }}
+                            </option>
+                        </select>
+
+                        <!-- <img src="{{ prod.img }}" /> -->
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin: 15px;">Submit</button>
+                    <button type="reset" class="btn btn-warning" style="margin: 15px;">Reset</button>
+                </form>
+                {{ prod | json }}
+            </div>
+            <hr />
             <div class="Produits" ng-controller="produitsCtrl as prods">
+                <h1>Liste Produits</h1>
                 <!--{{ prods | json }}-->
                 <ul class="list-group-item" ng-repeat="monprod in prods.produits"  >
                     <li class="list-group-item list-group-item-success " >
@@ -77,8 +112,9 @@
                                 <th>ID</th>
                                 <th>Nom</th>
                                 <th>Description</th>
-                                <th>Prix</th>
+                                <th>Prix €</th>
                                 <th>Stock</th>
+                                <th>Catégorie</th>
 
                             </tr>
                         </thead>
@@ -89,6 +125,7 @@
                                 <td> {{ monprod.description }}  </td>
                                 <td> {{ monprod.prix }} </td>
                                 <td> {{ monprod.stock }} </td>
+                                <td> {{ monprod.categorie.name }} </td>
                             </tr>
                         </tbody>
                     </table>
@@ -96,6 +133,7 @@
                 
                 
             </div>
+            <hr />
             <div class="produit" ng-controller="produitCtrl as prod">
                 <h1>{{ prod.nom }}</h1>
                 <div class="col-lg-6">
@@ -117,5 +155,6 @@
 <script src="app/app.js"></script>
 <script src="app/produitCtrl/produitCtrl.js"></script>
 <script src="app/produitsCtrl/produitsCtrl.js"></script>
+<script src="app/categoriesCtrl/categoriesCtrl.js"></script>
 
 </html>
