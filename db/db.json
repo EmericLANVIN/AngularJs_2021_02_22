@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "nom": "Boisson"
+    },
+    {
+      "id": 1,
+      "nom": "Dessert"
+    },
+    {
+      "id": 2,
+      "nom": "Plat"
+    },
+    {
+      "id": 3,
+      "nom": "Glace"
+    },
+    {
+      "id": 4,
+      "nom": "Bière"
+    }
+  ],
+  "produits": [
+    {
+      "id": 0,
+      "nom": "Pepsi 33cl",
+      "description": "Boisson gazeuse Americaine",
+      "prix": 2.54,
+      "stock": 10,
+      "img": "/img/Pepsi_transparent.png",
+      "categorieid": 0
+    },
+    {
+      "id": 1,
+      "nom": "Orangina 33cl",
+      "description": "Boisson gazeuse oranger Française",
+      "prix": 1.9,
+      "stock": 50,
+      "img": "/img/Orangina.jpg",
+      "categorieid": 0
+    },
+    {
+      "id": 2,
+      "nom": "Fanta 33cl",
+      "description": "Boisson gazeuse oranger Americaine",
+      "prix": 2,
+      "stock": 25,
+      "img": "/img/Fanta.png",
+      "categorieId": 0
+    },
+    {
+      "id": 3,
+      "nom": "Chouffe 33cl",
+      "description": "Boisson Belge alcoolisée au houblon",
+      "prix": 4,
+      "stock": 100,
+      "img": "/img/Chouffe.png",
+      "categorieId": 4
+    },
+    {
+      "id": 4,
+      "nom": "Carte d or vanille",
+      "description": "Glace vanille de Madagascar",
+      "prix": 5,
+      "stock": 50,
+      "img": "/img/vanille.jpg",
+      "categorieId": 3
+    },
+    {
+      "nom": "Breizh Cola 33cl",
+      "description": "Boisson gazeuse Bretonne",
+      "prix": 5,
+      "stock": 45,
+      "img": "/img/Breizh.png",
+      "categorieid": 0,
+      "id": 5
+    }
+  ],
+  "shop": {
+    "raisonSocial": "My Angular Shop",
+    "adresse": "11 rue de la Paix",
+    "ville": "PARIS",
+    "cp": "75000"
+  }
+}
