@@ -128,12 +128,12 @@
                         </div><br/>
                         <div class="produits-produit-col-b">
                             <h3>Description</h3>
-                            {{ produit.description|limitTo:12}}..
+                            {{ produit.description|myDescFilter }}
                         </div><br/>
                         <div  class="produits-produit-col-c">
-                            <h1> Prix => {{ produit.prix|myCurrency:'€'}} </h1> 
+                            <h1> Prix => {{ produit.prix|myCurrency:'€':2}} </h1> 
                             <button type="button" class="btn btn-warning">Panier</button>
-                            <button type="button" class="btn btn-success">button</button>
+                            <button type="button" class="btn btn-success">Voir</button>
                         </div><br/>
                     </div>
                </div>
@@ -167,7 +167,7 @@
                                 <td> {{ monprod.nom }} </td>
                                 <td> {{ monprod.description }}  </td>
                                 <td> <img src="{{ monprod.img }}"  class="img-fluid img-thumbnail" alt="" style="max-width: 100px; max-height: 100px;"/></td>
-                                <td> {{ monprod.prix }} </td>
+                                <td> {{ monprod.prix|myCurrency:'€':2}}</td>
                                 <td> {{ monprod.stock }} </td>
                                 <td> {{ monprod.categorie.name }} </td>
                                 <td> <input type="number" placeholder="Quantité" /> </td>
@@ -204,5 +204,5 @@
 <script src="app/produitsCtrl/produitsCtrl.js"></script>
 <script src="app/categoriesCtrl/categoriesCtrl.js"></script>
 <script src="app/myCurrencyFilter/myCurrecncyFilter.js"></script>
-
+<script src="app/limitDescFilter/limitDescFilter.js"></script>
 </html>

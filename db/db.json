@@ -72,7 +72,7 @@
       "description": "Boisson gazeuse Bretonne",
       "prix": 5,
       "stock": 45,
-      "img": "/img/Breizh.png",
+      "img": "/img/breizh.jpg",
       "categorieid": 0,
       "id": 5
     }
