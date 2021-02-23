@@ -5,21 +5,30 @@
         .module('app')
         .controller('categoriesCtrl', ControllerController);
 
-    ControllerController.$inject = [];
-    function ControllerController() {
+    // injection du $http afin d'effectuer des GET/POST/PUT/PATCH...
+    ControllerController.$inject = ['$http'];
+    function ControllerController($http) {
         var vm = this;
-        this.categories=[
-            {id:0, nom:'Boisson'},
-            {id:1, nom:'Dessert'},
-            {id:2, nom:'Plat'},
-            {id:3, nom:'Glace'},
-            {id:4, nom:'Bière'}
-        ]
+        this.categories=[];
 
         activate();
 
         ////////////////
 
-        function activate() { }
+        function activate() {
+            
+                $http({
+                    method:'GET',
+                    url:'http://localhost:5629/categories'
+
+                }).then(function success(response){
+                    console.log(response);
+                    vm.categories=response.data
+                    console.log('Valeur catégories du controller mises à jour \n',vm.categories);
+                },function unsuccess(response){
+                    console.log('Rest ERROR');
+                });
+
+         }
     }
 })();
