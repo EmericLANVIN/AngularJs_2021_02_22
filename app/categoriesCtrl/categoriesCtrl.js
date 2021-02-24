@@ -6,29 +6,10 @@
         .controller('categoriesCtrl', ControllerController);
 
     // injection du $http afin d'effectuer des GET/POST/PUT/PATCH...
-    ControllerController.$inject = ['$http'];
-    function ControllerController($http) {
+    ControllerController.$inject = ['produitSrvc'];
+    function ControllerController(prdSrvc) {
         var vm = this;
-        this.categories=[];
+        this.categories=prdSrvc.categories;
 
-        activate();
-
-        ////////////////
-
-        function activate() {
-            
-                $http({
-                    method:'GET',
-                    url:'http://localhost:5629/categories'
-
-                }).then(function success(response){
-                    console.log(response);
-                    vm.categories=response.data
-                    console.log('Valeur catégories du controller mises à jour \n',vm.categories);
-                },function unsuccess(response){
-                    console.log('Rest ERROR');
-                });
-
-         }
     }
 })();

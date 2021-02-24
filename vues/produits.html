@@ -1,0 +1,63 @@
+<div class="Produits" >
+    <h1>Liste Produits</h1>
+    <!--{{ prods | json }}-->
+    <div ng-repeat="produit in prods.produits" class="produits-produit" id="produits-produit-{{produit.id}}">
+        <h1>{{produit.id}} : {{produit.nom}}</h1><br/>
+        <div class="produits-produit-content">
+            <div class="produits-produit-col-a">
+                    <img src="{{ produit.img }}" alt=""  class="produits-produit img"/>
+            </div><br/>
+            <div class="produits-produit-col-b">
+                <h3>Description</h3>
+                {{ produit.description|myDescFilter }}
+            </div><br/>
+            <div  class="produits-produit-col-c">
+                <h1> Prix => {{ produit.prix|myCurrency:'€':2}} </h1> 
+                <button type="button" class="btn btn-warning">Panier</button>
+                <button type="button" class="btn btn-success" ng-click="onshowproductclick(produit)">Voir</button>
+            </div><br/>
+        </div>
+   </div>
+</hr>
+    <ul class="list-group-item" ng-repeat="monprod in prods.produits"  >
+        <li class="list-group-item list-group-item-success " >
+            {{ monprod.id }} |  {{ monprod.nom }} |  {{ monprod.description }} |  {{ monprod.prix }} |  {{ monprod.stock }} 
+        </li>
+    </ul>
+</hr>    
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Prix €</th>
+                    <th>Stock</th>
+                    <th>Catégorie</th>
+                    <th></th>
+                    <th>Quantité</th>
+                    <th>Panier</th>
+                    <th>Button</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="monprod in prods.produits">
+                    <td> {{ monprod.id }} </td>
+                    <td> {{ monprod.nom }} </td>
+                    <td> {{ monprod.description }}  </td>
+                    <td> <img src="{{ monprod.img }}"  class="img-fluid img-thumbnail" alt="" style="max-width: 100px; max-height: 100px;"/></td>
+                    <td> {{ monprod.prix|myCurrency:'€':2}}</td>
+                    <td> {{ monprod.stock }} </td>
+                    <td> {{ monprod.categorie.name }} </td>
+                    <td> <input type="number" placeholder="Quantité" /> </td>
+                    <td><button type="button" class="btn btn-warning">Panier</button></td>
+                    <td><button type="button" class="btn btn-success" ng-click="onshowproductclick(monprod)">Voir</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+</div>

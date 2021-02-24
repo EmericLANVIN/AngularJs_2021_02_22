@@ -26,7 +26,7 @@
       "id": 1,
       "nom": "Pepsi 33cl",
       "description": "Boisson gazeuse Americaine",
-      "prix": 2.54,
+      "prix": 6.9,
       "stock": 10,
       "categorieId": 0,
       "img": "/img/Pepsi_transparent.png"
@@ -37,8 +37,8 @@
       "description": "Boisson gazeuse oranger Americaine",
       "prix": 2,
       "stock": 25,
-      "img": "/img/Fanta.png",
-      "categorieId": 0
+      "categorieId": 1,
+      "img": "/img/Fanta.png"
     },
     {
       "id": 3,
@@ -55,8 +55,8 @@
       "description": "Glace vanille de Madagascar",
       "prix": 5,
       "stock": 50,
-      "img": "/img/vanille.jpg",
-      "categorieId": 3
+      "categorieId": 3,
+      "img": "/img/vanille.jpg"
     },
     {
       "nom": "Breizh Cola 33cl",

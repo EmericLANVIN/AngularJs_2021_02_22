@@ -1,0 +1,13 @@
+<div class="produit"  >
+    <h1> {{ prod.produit.nom }}</h1>
+    <div class="col-lg-4">
+        <img ng-src="{{ prod.produit.img }}" alt="" style="max-height: 150px;max-width: 150px;"/>
+    </div>
+    <div class="col-lg-5">
+        {{ prod.produit.description }} <br />
+        prix : {{ prod.produit.prix }} <br />
+        <br />
+        <button type="button" class="btn btn-success">Ajouter au panier</button>
+
+    </div>
+</div>
