@@ -25,7 +25,7 @@
                 $scope.onSubmitForm = function () {
                     $http({
                         url: 'http://localhost:5629/produits/' + virtualThis.id,
-                        method: (undefined===virtualThis.id)?'PUT' : 'POST',
+                        method: (undefined===virtualThis.id)? 'PUT' : 'POST',
                         headers: {
                             'Content-Type': 'application/json'
                         },
