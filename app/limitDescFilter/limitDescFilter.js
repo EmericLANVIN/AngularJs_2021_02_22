@@ -12,11 +12,12 @@
 
         function FilterFilter(Params, maxlength) {
             if(undefined==maxlength)maxlength=15;
-            if(Params.length == maxlength) {
-                return Params
-            } else {
+
+            if(Params.toString().length < maxlength) {
+                return Params;
+            } 
                 return Params.substring(0,maxlength)+'...';
-            }
+            
             
         }
     }

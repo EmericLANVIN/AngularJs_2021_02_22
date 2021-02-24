@@ -23,22 +23,13 @@
   ],
   "produits": [
     {
-      "id": 0,
+      "id": 1,
       "nom": "Pepsi 33cl",
       "description": "Boisson gazeuse Americaine",
       "prix": 2.54,
       "stock": 10,
-      "img": "/img/Pepsi_transparent.png",
-      "categorieid": 0
-    },
-    {
-      "id": 1,
-      "nom": "Orangina 33cl",
-      "description": "Boisson gazeuse oranger Française",
-      "prix": 1.94343453,
-      "stock": 50,
-      "img": "/img/Orangina.jpg",
-      "categorieid": 0
+      "categorieId": 0,
+      "img": "/img/Pepsi_transparent.png"
     },
     {
       "id": 2,
